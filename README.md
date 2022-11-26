@@ -43,6 +43,10 @@ L'idée est d'utiliser un id avec un systeme de correspondance
 * [ ] un endpoint pour donner l'url à traiter qui nous donne la version courte
 * [ ] un endpoint pour nous donner la version longue à partir de la version courte
 
+_Idées :_
+- Utlisation d'un object en mémoire
+- Utlisation d'un fichier
+
 ## Api en nodejs qui permet de raccourcir une url avec seulement 4 caractères
 L'idée est d'utiliser un id avec un systeme de correspondance
 * [ ] un endpoint pour donner l'url à traiter qui nous donne la version courte
@@ -65,6 +69,8 @@ L'idée est d'utiliser un id avec un systeme de correspondance
 
 ## API et sécurité
 
+## API et qualité du code
+
 ## API et conteneur
 
 ## API et firebase
@@ -77,9 +83,11 @@ L'idée est d'utiliser un id avec un systeme de correspondance
 
 ## API et optimisation 
 
-
 ## API et gitHub action
 
+## API et chaos
+
+--------------------
 
 # Prerequis
 
@@ -102,26 +110,49 @@ L'idée est d'utiliser un id avec un systeme de correspondance
 Installez Nodejs : https://nodejs.org/fr/download/
 
     npm init -y
-    npm install --save express
-    npm install --save cors
-    npm install --save body-parser
-    npm install --save morgan
-    npm install --save-dev nodemon
-    npm install --save js-string-compression
 
-Exécution de notre backend
-nodemon index.js
+Exécution du backend
+
+    nodemon index.js
 
 #### NodeJs - Dependencies used
 
-- [Express] : Web application framework 
-- [Cors] : 
-- Body-Parser : middleware pour traiter le requête brute
-- Morgan : log
+ - [Express](https://expressjs.com/) : framework d'application Web conçu pour créer des applications Web et des API.
+- [CORS](https://github.com/expressjs/cors) : middleware express pour activer les fonctionnalités CORS.
+- [Body-Parser] : middleware pour traiter le requête brute
+- [Morgan] : log
+- [js-string-compression] : Lib de compression de strings
 
-## NodeJs - Dependencies used for dev
-Nodemon : Nodemon est un outil qui aide à développer des applications basées sur .js nœud en redémarrant automatiquement l’application de nœud lorsque des modifications de fichier dans le répertoire sont détectées.
+    npm install --save express
+    npm install --save cors
+    npm install --save body-parser
+    npm install --save morgan   
+    npm install --save js-string-compression
+
+Bientôt => 
+
+- [joi](https://github.com/hapijs/joi) : bibliothèque de validation de schéma d'objet.
+- [dotenv](https://github.com/motdotla/dotenv) : pour définir les variables d'environnement.
+- [Swagger UI Express](https://github.com/scottie1984/swagger-ui-express) : documentation API générée automatiquement, basée sur un fichier swagger.json.
+- [ESLint](https://eslint.org/) : linter de code. Analyse le code des erreurs potentielles.
+- [Jest](https://jestjs.io/) : pour les tests.
+- [Helmet](https://helmetjs.github.io/) : sécurité Express.js avec en-têtes HTTP
+
+
+#### NodeJs - Dependencies used for dev
+- [Nodemon] : Nodemon est un outil qui aide à développer des applications basées sur .js nœud en redémarrant automatiquement l’application de nœud lorsque des modifications de fichier dans le répertoire sont détectées.
+
+    npm install --save-dev nodemon
 
 ### firebase functions
 
 ### cloud
+* [ ] Setup Local project
+* [ ] Setup gcloud poc environment
+
+# Memento 
+
+## Firebase Commands
+
+firebase init
+firebase login --reauth
