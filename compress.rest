@@ -1,0 +1,43 @@
+@contentType = application/json
+@createdAt = {{$datetime iso8601}}
+@modifiedBy = {{$processEnv USERNAME}}
+
+###
+POST http://localhost:3001/compress/short/ HTTP/1.1
+content-type: {{contentType}}
+
+{
+    "url": "http://localhost:3001/compress/short/",
+    "created_at": "{{createdAt}}",
+    "modified_by": "{{modifiedBy}}"
+}
+
+###
+POST http://localhost:3001/compress/passhort/ HTTP/1.1
+content-type: {{contentType}}
+
+{
+    "url": "\u000bdêæº.S\u0002Þ±Ú\u0012òÂ²ÛW\u0004Ægixv\t\\\u000b\u000fîÿjùº'\u001b°",
+    "created_at": "{{createdAt}}",
+    "modified_by": "{{modifiedBy}}"
+}
+
+### short2
+POST http://localhost:3001/compress/short2/ HTTP/1.1
+content-type: {{contentType}}
+
+{
+    "url": "http://localhost:3001/compress/short/",
+    "created_at": "{{createdAt}}",
+    "modified_by": "{{modifiedBy}}"
+}
+
+### passhort2
+POST http://localhost:3001/compress/passhort2/ HTTP/1.1
+content-type: {{contentType}}
+
+{
+    "url": "1f8b0800000000000003cb282929b0d2d7cfc94f4eccc9c82f2eb132363030d44fcecf2d284a2d2ed62fcec82f2ad10700e9c1ac2525000000",
+    "created_at": "{{createdAt}}",
+    "modified_by": "{{modifiedBy}}"
+}

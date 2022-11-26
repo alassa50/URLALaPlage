@@ -1,0 +1,24 @@
+@contentType = application/json
+@createdAt = {{$datetime iso8601}}
+@modifiedBy = {{$processEnv USERNAME}}
+
+### avec une chaine de caracteres 
+GET http://localhost:3001/youpi/short/alexandre HTTP/1.1
+
+### avec une URL
+GET http://localhost:3001/youpi/short/http%3A%2F%2Flocalhost%3A3001%2Fyoupi%2Fpasshort%2Falexandre HTTP/1.1
+
+### avec une chaine de caracteres 
+
+GET http://localhost:3001/youpi/passhort/alexandreyoupiohoh HTTP/1.1
+
+### en mode post
+
+POST http://localhost:3001/youpi/short/ HTTP/1.1
+content-type: {{contentType}}
+
+{
+    "url": "http://localhost:3001/youpi/short/",
+    "created_at": "{{createdAt}}",
+    "modified_by": "{{modifiedBy}}"
+}
