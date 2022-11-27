@@ -6,14 +6,15 @@ const loggerMorgan = require('morgan');
 const port = process.env.PORT || 3001;
 
 // Les differents codes
-const youpi = require('./youpi');
-const compress = require('./compress');
+const youpi = require('./src/youpi');
+const compress = require('./src/compress');
+const memory = require('./src/memory');
 
 // Initialize server
 const app = express();
 
 // logger
-const logger = require('./utils/logger');
+const logger = require('./src/utils/logger');
 
 app.use(loggerMorgan('dev'));
 app.use(cors());
@@ -23,6 +24,7 @@ app.use(bodyParser.json());
 // Utilsation des codes
 app.use('/youpi', youpi);
 app.use('/compress', compress);
+app.use('/memory2', memory);
 
 // Une petite page par défaut histoire de voir que ça marche
 app.get('/', (req, res) => {

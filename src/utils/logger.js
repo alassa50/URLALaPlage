@@ -1,3 +1,6 @@
+/* eslint-disable no-restricted-syntax */
+/* eslint-disable no-console */
+/* eslint-disable guard-for-in */
 const logger = {};
 
 logger.log = (text) => {

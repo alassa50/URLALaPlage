@@ -1,0 +1,23 @@
+@contentType = application/json
+@createdAt = {{$datetime iso8601}}
+@modifiedBy = {{$processEnv USERNAME}}
+
+###
+POST http://localhost:3001/memory2/short/ HTTP/1.1
+content-type: {{contentType}}
+
+{
+    "url": "http://localhost:3001/memory2/short/",
+    "created_at": "{{createdAt}}",
+    "modified_by": "{{modifiedBy}}"
+}
+
+###
+POST http://localhost:3001/memory2/passhort/ HTTP/1.1
+content-type: {{contentType}}
+
+{
+    "url": "dac477a9-e5e9-4015-9589-debf640eae40",
+    "created_at": "{{createdAt}}",
+    "modified_by": "{{modifiedBy}}"
+}

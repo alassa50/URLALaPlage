@@ -40,8 +40,8 @@ La compression sur peu de caractères n'est pas pertinente avec les algo testés
 
 ## Api en nodejs qui permet de raccourcir une url avec un id
 L'idée est d'utiliser un id avec un systeme de correspondance
-* [ ] un endpoint pour donner l'url à traiter qui nous donne la version courte
-* [ ] un endpoint pour nous donner la version longue à partir de la version courte
+* [X] un endpoint pour donner l'url à traiter qui nous donne la version courte
+* [X] un endpoint pour nous donner la version longue à partir de la version courte
 
 _Idées :_
 - Utlisation d'un object en mémoire
@@ -60,6 +60,8 @@ L'idée est d'utiliser un id avec un systeme de correspondance
 ## API et swagger
 
 ## API et log
+* [X] Ecrire une fonction qui remplace le console.log 
+* [X] Ecrire une fonction de log des req
 
 ## API et metrics
 
@@ -69,7 +71,9 @@ L'idée est d'utiliser un id avec un systeme de correspondance
 
 ## API et sécurité
 
-## API et qualité du code
+## API et qualité du code (et présentation)
+* [X] Ajout d'ESLINT
+* [X] Ajout de prettier
 
 ## API et conteneur
 
