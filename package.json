@@ -4,15 +4,21 @@
   "description": "Repo contenant différents bouts de codes autour d'un sujet simple.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "lint:code": "eslint .",
+    "lint:fix": "eslint --fix .",    
+    "format": "npm-run-all -p format:*",
+    "format:code": "npm run prettier:code -- --write",
+    "format:other": "npm run prettier:other -- --write",
+    "prettier:code": "prettier \"**/*.js\"",
+    "prettier:other": "prettier \"**/*.{md,css,scss,yaml,yml}\""
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alassa50/URLALaPlage.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["API", "URL"],
+  "author": "Alexandre LASSALLE",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/alassa50/URLALaPlage/issues"
@@ -23,9 +29,18 @@
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "js-string-compression": "^1.0.1",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "eslint": "^8.28.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "nodemon": "^2.0.20",
+    "prettier": "2.8.0"
+  },
+  "engines": {
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
   }
 }

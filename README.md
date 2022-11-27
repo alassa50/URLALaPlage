@@ -105,6 +105,15 @@ L'idée est d'utiliser un id avec un systeme de correspondance
 
 ### VSCODE
 
+#### REST Client
+
+    Nom : REST Client
+    ID : humao.rest-client
+    Description : REST Client for Visual Studio Code
+    Version : 0.25.1
+    Serveur de publication : Huachao Mao
+    Lien de la Place de marché pour VS : https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+
 ### NodeJs
 
 Installez Nodejs : https://nodejs.org/fr/download/
@@ -120,14 +129,19 @@ Exécution du backend
  - [Express](https://expressjs.com/) : framework d'application Web conçu pour créer des applications Web et des API.
 - [CORS](https://github.com/expressjs/cors) : middleware express pour activer les fonctionnalités CORS.
 - [Body-Parser] : middleware pour traiter le requête brute
-- [Morgan] : log
+- [Morgan] : HTTP loggeur
 - [js-string-compression] : Lib de compression de strings
+- [uuid] : uuid
+
 
     npm install --save express
     npm install --save cors
     npm install --save body-parser
     npm install --save morgan   
     npm install --save js-string-compression
+    npm install --save uuid
+    
+    
 
 Bientôt => 
 
@@ -141,8 +155,15 @@ Bientôt =>
 
 #### NodeJs - Dependencies used for dev
 - [Nodemon] : Nodemon est un outil qui aide à développer des applications basées sur .js nœud en redémarrant automatiquement l’application de nœud lorsque des modifications de fichier dans le répertoire sont détectées.
+- [prettier] : prettier
 
     npm install --save-dev nodemon
+    npm install --save-dev --save-exact prettier
+
+
+### ESLINT
+
+npm init @eslint/config
 
 ### firebase functions
 
