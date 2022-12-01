@@ -1,3 +1,4 @@
+![Logo](./images/URLALaPlage-logo.jpg)
 # URL A LA PLAGE
 Repo contenant différents bouts de codes autour d'un sujet simple.
 
