@@ -1,11 +1,11 @@
 ![Logo](./images/URLALaPlage-logo.jpg)
-# URL A LA PLAGE
+# ⛱️ URL A LA PLAGE
 Repo contenant différents bouts de codes autour d'un sujet simple.
 
-## L'objectif de ce projet
+## 📖 L'objectif de ce projet
 En partant d'une idée simple (jouer avec des urls) explorer des concepts des manières de faire au niveau code, archi et permettre de tester des technos.
 
-## Api en nodejs qui permet d'ajouter "youpi" une url
+## 🥕 Api en nodejs qui permet d'ajouter "youpi" une url
 ### A faire
 * [X] un endpoint pour ajouter youpi à l'url à traiter pour avoir la version short (hum ajouter des caractères pour avec une version plus courte, un concept ^^)
 * [X] un endpoint pour enlever youpi à partir de la version short
@@ -16,7 +16,7 @@ En partant d'une idée simple (jouer avec des urls) explorer des concepts des ma
 * Conclusion :
 Les bases sont là, ça marche c'est pas mal mais ça ne sert pas à grand chose pour le moment ^^
 
-## Api en nodejs qui permet de raccourcir une url en "zippant"
+## 🥕 Api en nodejs qui permet de raccourcir une url en "zippant"
 ### A faire
 L'idée est de faire une sorte de compacteur style zip de l'information
 * [X] un endpoint pour donner l'url à traiter qui nous donne la version courte
@@ -39,7 +39,7 @@ Pour la même source : "http://localhost:3001/compress/short/"
 
 La compression sur peu de caractères n'est pas pertinente avec les algo testés 
 
-## Api en nodejs qui permet de raccourcir une url avec un id
+## 🥕 Api en nodejs qui permet de raccourcir une url avec un id
 L'idée est d'utiliser un id avec un systeme de correspondance
 * [X] un endpoint pour donner l'url à traiter qui nous donne la version courte
 * [X] un endpoint pour nous donner la version longue à partir de la version courte
@@ -48,53 +48,46 @@ _Idées :_
 - Utlisation d'un object en mémoire
 - Utlisation d'un fichier
 
-## Api en nodejs qui permet de raccourcir une url avec seulement 4 caractères
+## 🥕 Api en nodejs qui permet de raccourcir une url avec seulement 4 caractères
 L'idée est d'utiliser un id avec un systeme de correspondance
 * [ ] un endpoint pour donner l'url à traiter qui nous donne la version courte
 * [ ] un endpoint pour nous donner la version longue à partir de la version courte
 
-
-## API et docs archi
-
-## API et doc decisions
-
-## API et swagger
-
-## API et log
+## 🥕 API et log
 * [X] Ecrire une fonction qui remplace le console.log 
 * [X] Ecrire une fonction de log des req
 
-## API et metrics
-
-## API et traces
-
-## API et tests
-
-## API et sécurité
-
-## API et qualité du code (et présentation)
+## 🥕 API et qualité du code (et présentation)
 * [X] Ajout d'ESLINT
 * [X] Ajout de prettier
 
-## API et conteneur
+## 📖 A faire
 
-## API et firebase
-
-## API et bucket
-
-## API et postman...
-
-## API et jMeter
-
-## API et optimisation 
-
-## API et gitHub action
-
-## API et chaos
+- [X] Api en nodejs qui permet d'ajouter "youpi" une url
+- [X] Api en nodejs qui permet de raccourcir une url en "zippant"
+- [X] Api en nodejs qui permet de raccourcir une url avec un id
+- [X] Api en nodejs qui permet de raccourcir une url avec seulement 4 caractères
+- [X] API et log
+- [ ] API et docs archi
+- [ ] API et doc decisions
+- [ ] API et swagger
+- [ ] API et metrics
+- [ ] API et traces
+- [ ] API et tests
+- [ ] API et sécurité
+- [X] API et qualité du code (et présentation)
+- [ ] API et conteneur
+- [ ] API et firebase
+- [ ] API et bucket
+- [ ] API et postman...
+- [ ] API et jMeter
+- [ ] API et optimisation 
+- [ ] API et gitHub action
+- [ ] API et chaos
 
 --------------------
 
-# Prerequis
+# 🛠 Prerequis
 
 ## Setup
 

@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon server.js",
     "lint:code": "eslint .",
-    "lint:fix": "eslint --fix .",    
+    "lint:fix": "eslint --fix .",
     "format": "npm-run-all -p format:*",
     "format:code": "npm run prettier:code -- --write",
     "format:other": "npm run prettier:other -- --write",
@@ -17,7 +17,10 @@
     "type": "git",
     "url": "git+https://github.com/alassa50/URLALaPlage.git"
   },
-  "keywords": ["API", "URL"],
+  "keywords": [
+    "API",
+    "URL"
+  ],
   "author": "Alexandre LASSALLE",
   "license": "ISC",
   "bugs": {
@@ -35,7 +38,9 @@
   "devDependencies": {
     "eslint": "^8.28.0",
     "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "nodemon": "^2.0.20",
     "prettier": "2.8.0"
   },
