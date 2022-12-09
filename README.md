@@ -85,13 +85,32 @@ L'idée est d'utiliser un id avec un systeme de correspondance
 - [ ] API et gitHub action
 - [ ] API et chaos
 
---------------------
+---
 
-# 🛠 Prerequis
+# ❤️  Development
 
-## Setup
+## 🏁  Commandes
 
-### Git
+```zsh
+# Clone 
+git clone https://github.com/alassa50/URLALaPlage.git
+
+# Installation des dépendances
+npm i
+
+# lancement en mode dev
+npm run dev
+
+```
+
+---
+
+
+# 🛠 Journal de dev
+
+## 📌 Setup
+
+### 🛴 Git
 
     echo "# URLALaPlage" >> README.md
     git init
@@ -101,7 +120,7 @@ L'idée est d'utiliser un id avec un systeme de correspondance
     git remote add origin git@github.com:alassa50/URLALaPlage.git
     git push -u origin main
 
-### VSCODE
+### 🚲 VSCODE
 
 #### REST Client
 
@@ -112,7 +131,7 @@ L'idée est d'utiliser un id avec un systeme de correspondance
     Serveur de publication : Huachao Mao
     Lien de la Place de marché pour VS : https://marketplace.visualstudio.com/items?itemName=humao.rest-client
 
-### NodeJs
+### 🛵 NodeJs
 
 Installez Nodejs : https://nodejs.org/fr/download/
 
@@ -159,7 +178,7 @@ Bientôt =>
     npm install --save-dev --save-exact prettier
 
 
-### ESLINT
+### 🔎 ESLINT
 
 npm init @eslint/config
 
@@ -169,7 +188,7 @@ npm init @eslint/config
 * [ ] Setup Local project
 * [ ] Setup gcloud poc environment
 
-# Memento 
+# 📝 Memento 
 
 ## Firebase Commands
 
