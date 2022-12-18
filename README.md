@@ -73,6 +73,9 @@ L'idée est d'utiliser un id avec un systeme de correspondance
 * [X] Ecrire une fonction qui remplace le console.log
 * [X] Ecrire une fonction de log des req
 
+🎯 Résultat
+
+
 ### 🥕 API et qualité du code (et présentation)
 
 * [X] Ajout d'ESLINT
@@ -95,6 +98,7 @@ L'idée est d'utiliser un id avec un systeme de correspondance
 * [X] API et qualité du code (et présentation)
 * [ ] API et conteneur
 * [ ] API et firebase
+* [ ] API et mongo
 * [ ] API et bucket
 * [ ] API et postman...
 * [ ] API et jMeter
@@ -184,6 +188,9 @@ Exécution du backend
 * [Morgan] : HTTP loggeur
 * [js-string-compression] : Lib de compression de strings
 * [uuid] : uuid
+* [pino] : pour la partie log pino
+* [pino-pretty] : pour pino -> pino-pretty
+
 
 ``` npm
     npm install --save express
@@ -192,6 +199,8 @@ Exécution du backend
     npm install --save morgan
     npm install --save js-string-compression
     npm install --save uuid
+    npm install --save pino
+
 ```
 
 Bientôt =>

@@ -29,7 +29,7 @@ router.post('/short', async (req, res) => {
   logger.logHeader(req);
 
   const { url } = req.body;
-  logger.log('url :', url);
+  logger.info({ url, url });
 
   try {
     res.status(200).json({

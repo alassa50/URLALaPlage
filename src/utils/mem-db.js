@@ -64,6 +64,7 @@ class memdb {
     if (Object.keys(obj).indexOf('where') === -1 || !this.#isJSONObject(obj)) {
       throw new Error('Query error');
     }
+    // eslint-disable-next-line max-len
     this.db = this.db.filter((x) => x[Object.keys(obj.where)[0]] !== obj.where[Object.keys(obj.where)[0]]);
   }
 

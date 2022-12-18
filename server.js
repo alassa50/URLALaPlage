@@ -36,7 +36,7 @@ app.all('*', (req, res) => {
 
 // Hop on démarre
 app.listen(port, () => {
-  logger.log(`Runnning on ${port}`);
+  logger.info(`Runnning on ${port}`);
 });
 
 module.exports = app;
