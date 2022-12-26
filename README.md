@@ -220,6 +220,7 @@ Bientôt =>
 
     npm install --save-dev nodemon
     npm install --save-dev --save-exact prettier
+    npm install --save-dev autocannon
 
 #### 🔎 ESLINT
 

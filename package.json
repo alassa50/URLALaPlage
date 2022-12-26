@@ -11,7 +11,8 @@
     "format:code": "npm run prettier:code -- --write",
     "format:other": "npm run prettier:other -- --write",
     "prettier:code": "prettier \"**/*.js\"",
-    "prettier:other": "prettier \"**/*.{md,css,scss,yaml,yml}\""
+    "prettier:other": "prettier \"**/*.{md,css,scss,yaml,yml}\"",
+    "benchmark": "node benchmark/benchmark-run.js"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,7 @@
   },
   "homepage": "https://github.com/alassa50/URLALaPlage#readme",
   "dependencies": {
+    "autocannon": "^7.10.0",
     "body-parser": "^1.20.1",
     "cors": "^2.8.5",
     "express": "^4.18.2",
