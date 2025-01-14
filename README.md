@@ -1,6 +1,7 @@
 # ⛱️ URL A LA PLAGE
 
 Repo contenant différents bouts de codes autour d'un sujet simple.
+
 ![Logo](./images/URLALaPlage-logo.jpg)
 
 ## 📖 L'objectif de ce projet
