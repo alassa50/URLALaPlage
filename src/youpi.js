@@ -27,9 +27,8 @@ router.get('/short/:url', async (req, res) => {
 //  la version post
 router.post('/short', async (req, res) => {
   logger.logHeader(req);
-
   const { url } = req.body;
-  logger.info({ url, url });
+  logger.info(`URL received: ${url}`);
 
   try {
     res.status(200).json({

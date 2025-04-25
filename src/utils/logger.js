@@ -18,21 +18,30 @@ logger.logHeaderPino = (req) => {
   let name;
   logger.info('--- headers ---');
   for (name in req.headers) {
-    logger.info({
-      name: req.headers[name],
-    }, name);
+    logger.info(
+      {
+        name: req.headers[name],
+      },
+      name,
+    );
   }
   logger.info('--- params ---');
   for (name in req.params) {
-    logger.info({
-      name: req.params[name],
-    }, name);
+    logger.info(
+      {
+        name: req.params[name],
+      },
+      name,
+    );
   }
   logger.info('--- body ---');
   for (name in req.body) {
-    logger.info({
-      name: req.body[name],
-    }, name);
+    logger.info(
+      {
+        name: req.body[name],
+      },
+      name,
+    );
   }
 };
 

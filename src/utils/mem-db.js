@@ -46,7 +46,11 @@ class memdb {
   }
 
   update(obj) {
-    if (Object.keys(obj).indexOf('where') === -1 || Object.keys(obj).indexOf('set') === -1 || !this.#isJSONObject(obj)) {
+    if (
+      Object.keys(obj).indexOf('where') === -1 ||
+      Object.keys(obj).indexOf('set') === -1 ||
+      !this.#isJSONObject(obj)
+    ) {
       throw new Error('Query error');
     }
     const a = this.#inSelect(obj.where);
@@ -65,7 +69,9 @@ class memdb {
       throw new Error('Query error');
     }
     // eslint-disable-next-line max-len
-    this.db = this.db.filter((x) => x[Object.keys(obj.where)[0]] !== obj.where[Object.keys(obj.where)[0]]);
+    this.db = this.db.filter(
+      (x) => x[Object.keys(obj.where)[0]] !== obj.where[Object.keys(obj.where)[0]],
+    );
   }
 
   truncate() {

@@ -12,15 +12,15 @@ En partant d'une idée simple (jouer avec des urls) explorer des concepts des ma
 
 🚧 A faire
 
-* [X] un endpoint pour ajouter youpi à l'url à traiter pour avoir la version short (hum ajouter des caractères pour avec une version plus courte, un concept ^^)
-* [X] un endpoint pour enlever youpi à partir de la version short
+- [x] un endpoint pour ajouter youpi à l'url à traiter pour avoir la version short (hum ajouter des caractères pour avec une version plus courte, un concept ^^)
+- [x] un endpoint pour enlever youpi à partir de la version short
 
 🎯 Résultat
 
-* Code :
- _source : youpi.js & pour test : youpi.rest_
-* Conclusion :
-Les bases sont là, ça marche c'est pas mal mais ça ne sert pas à grand chose pour le moment ^^
+- Code :
+  _source : youpi.js & pour test : youpi.rest_
+- Conclusion :
+  Les bases sont là, ça marche c'est pas mal mais ça ne sert pas à grand chose pour le moment ^^
 
 ### 🥕 Api en nodejs qui permet de raccourcir une url en "zippant"
 
@@ -28,25 +28,25 @@ Les bases sont là, ça marche c'est pas mal mais ça ne sert pas à grand chose
 
 L'idée est de faire une sorte de compacteur style zip de l'information
 
-* [X] un endpoint pour donner l'url à traiter qui nous donne la version courte
-* [X] un endpoint pour nous donner la version longue à partir de la version courte
+- [x] un endpoint pour donner l'url à traiter qui nous donne la version courte
+- [x] un endpoint pour nous donner la version longue à partir de la version courte
 
 _Idées :_
 
-* Utilisation de js-string-compression
-* Utilisation de zlib
+- Utilisation de js-string-compression
+- Utilisation de zlib
 
 🎯 Résultat
 
-* Code :
- _source : compress.js & pour test : compress.rest_
-* Conclusion :
-Pour la même source : "http://localhost:3001/compress/short/"
+- Code :
+  _source : compress.js & pour test : compress.rest_
+- Conclusion :
+  Pour la même source : "http://localhost:3001/compress/short/"
 
-| Source | Resultat |
-| --- | ----------- |
-| jsscompress.Hauffman() | \u000bdêæº.S\u0002Þ±Ú\u0012òÂ²ÛW\u0004Ægixv\t\\\u000b\u000fîÿjùº'\u001b° |
-| zlib | 1f8b0800000000000003cb282929b0d2d7cfc94f4eccc9c82f2eb132363030d44fcecf2d284a2d2ed62fcec82f2ad10700e9c1ac2525000000 |
+| Source                 | Resultat                                                                                                           |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| jsscompress.Hauffman() | \u000bdêæº.S\u0002Þ±Ú\u0012òÂ²ÛW\u0004Ægixv\t\\\u000b\u000fîÿjùº'\u001b°                                           |
+| zlib                   | 1f8b0800000000000003cb282929b0d2d7cfc94f4eccc9c82f2eb132363030d44fcecf2d284a2d2ed62fcec82f2ad10700e9c1ac2525000000 |
 
 La compression sur peu de caractères n'est pas pertinente avec les algo testés
 
@@ -54,67 +54,66 @@ La compression sur peu de caractères n'est pas pertinente avec les algo testés
 
 L'idée est d'utiliser un id avec un systeme de correspondance
 
-* [X] un endpoint pour donner l'url à traiter qui nous donne la version courte
-* [X] un endpoint pour nous donner la version longue à partir de la version courte
+- [x] un endpoint pour donner l'url à traiter qui nous donne la version courte
+- [x] un endpoint pour nous donner la version longue à partir de la version courte
 
 _Idées :_
 
-* Utlisation d'un object en mémoire
-* Utlisation d'un fichier
+- Utlisation d'un object en mémoire
+- Utlisation d'un fichier
 
 ### 🥕 Api en nodejs qui permet de raccourcir une url avec seulement 4 caractères
 
 L'idée est d'utiliser un id avec un systeme de correspondance
 
-* [ ] un endpoint pour donner l'url à traiter qui nous donne la version courte
-* [ ] un endpoint pour nous donner la version longue à partir de la version courte
+- [ ] un endpoint pour donner l'url à traiter qui nous donne la version courte
+- [ ] un endpoint pour nous donner la version longue à partir de la version courte
 
 ### 🥕 API et log
 
-* [X] Ecrire une fonction qui remplace le console.log
-* [X] Ecrire une fonction de log des req
+- [x] Ecrire une fonction qui remplace le console.log
+- [x] Ecrire une fonction de log des req
 
 🎯 Résultat
 
-
 ### 🥕 API et qualité du code (et présentation)
 
-* [X] Ajout d'ESLINT
-* [X] Ajout de prettier
+- [x] Ajout d'ESLINT
+- [x] Ajout de prettier
 
 ### 📖 A faire
 
-* [X] Api en nodejs qui permet d'ajouter "youpi" une url
-* [X] Api en nodejs qui permet de raccourcir une url en "zippant"
-* [X] Api en nodejs qui permet de raccourcir une url avec un id
-* [X] Api en nodejs qui permet de raccourcir une url avec seulement 4 caractères
-* [X] API et log
-* [ ] API et docs archi
-* [ ] API et doc decisions
-* [ ] API et swagger
-* [ ] API et metrics
-* [ ] API et traces
-* [ ] API et tests
-* [ ] API et sécurité
-* [X] API et qualité du code (et présentation)
-* [ ] API et conteneur
-* [ ] API et firebase
-* [ ] API et mongo
-* [ ] API et bucket
-* [ ] API et postman...
-* [ ] API et jMeter
-* [ ] API et optimisation
-* [ ] API et gitHub action
-* [ ] API et chaos
+- [x] Api en nodejs qui permet d'ajouter "youpi" une url
+- [x] Api en nodejs qui permet de raccourcir une url en "zippant"
+- [x] Api en nodejs qui permet de raccourcir une url avec un id
+- [x] Api en nodejs qui permet de raccourcir une url avec seulement 4 caractères
+- [x] API et log
+- [ ] API et docs archi
+- [ ] API et doc decisions
+- [ ] API et swagger
+- [ ] API et metrics
+- [ ] API et traces
+- [ ] API et tests
+- [ ] API et sécurité
+- [x] API et qualité du code (et présentation)
+- [ ] API et conteneur
+- [ ] API et firebase
+- [ ] API et mongo
+- [ ] API et bucket
+- [ ] API et postman...
+- [ ] API et jMeter
+- [ ] API et optimisation
+- [ ] API et gitHub action
+- [ ] API et chaos
 
 ---
 
 ## ❤️ Development
 
-### 🏁  Commandes
+### 🏁 Commandes
 
 ```zsh
-# Clone 
+# Clone
 git clone https://github.com/alassa50/URLALaPlage.git
 
 # Installation des dépendances
@@ -144,7 +143,7 @@ curl -H "Content-Type: application/json" -d '{"url": "http://localhost:3001/youp
 
 #### 🛴 Git
 
-``` git
+```git
     echo "# URLALaPlage" >> README.md
     git init
     git add README.md
@@ -158,7 +157,7 @@ curl -H "Content-Type: application/json" -d '{"url": "http://localhost:3001/youp
 
 ##### REST Client
 
-``` REST
+```REST
     Nom : REST Client
     ID : humao.rest-client
     Description : REST Client for Visual Studio Code
@@ -171,29 +170,28 @@ curl -H "Content-Type: application/json" -d '{"url": "http://localhost:3001/youp
 
 Installez Nodejs : <https://nodejs.org/fr/download/>
 
-``` npm
+```npm
     npm init -y
 ```
 
 Exécution du backend
 
-``` npm
+```npm
     nodemon index.js
 ```
 
 ##### NodeJs - Dependencies used
 
-* [Express](https://expressjs.com/) : framework d'application Web conçu pour créer des applications Web et des API.
-* [CORS](https://github.com/expressjs/cors) : middleware express pour activer les fonctionnalités CORS.
-* [Body-Parser] : middleware pour traiter le requête brute
-* [Morgan] : HTTP loggeur
-* [js-string-compression] : Lib de compression de strings
-* [uuid] : uuid
-* [pino] : pour la partie log pino
-* [pino-pretty] : pour pino -> pino-pretty
+- [Express](https://expressjs.com/) : framework d'application Web conçu pour créer des applications Web et des API.
+- [CORS](https://github.com/expressjs/cors) : middleware express pour activer les fonctionnalités CORS.
+- [Body-Parser] : middleware pour traiter le requête brute
+- [Morgan] : HTTP loggeur
+- [js-string-compression] : Lib de compression de strings
+- [uuid] : uuid
+- [pino] : pour la partie log pino
+- [pino-pretty] : pour pino -> pino-pretty
 
-
-``` npm
+```npm
     npm install --save express
     npm install --save cors
     npm install --save body-parser
@@ -206,22 +204,22 @@ Exécution du backend
 
 Bientôt =>
 
-* [joi](https://github.com/hapijs/joi) : bibliothèque de validation de schéma d'objet.
-* [dotenv](https://github.com/motdotla/dotenv) : pour définir les variables d'environnement.
-* [Swagger UI Express](https://github.com/scottie1984/swagger-ui-express) : documentation API générée automatiquement, basée sur un fichier swagger.json.
-* [ESLint](https://eslint.org/) : linter de code. Analyse le code des erreurs potentielles.
-* [Jest](https://jestjs.io/) : pour les tests.
-* [Helmet](https://helmetjs.github.io/) : sécurité Express.js avec en-têtes HTTP
+- [joi](https://github.com/hapijs/joi) : bibliothèque de validation de schéma d'objet.
+- [dotenv](https://github.com/motdotla/dotenv) : pour définir les variables d'environnement.
+- [Swagger UI Express](https://github.com/scottie1984/swagger-ui-express) : documentation API générée automatiquement, basée sur un fichier swagger.json.
+- [ESLint](https://eslint.org/) : linter de code. Analyse le code des erreurs potentielles.
+- [Jest](https://jestjs.io/) : pour les tests.
+- [Helmet](https://helmetjs.github.io/) : sécurité Express.js avec en-têtes HTTP
 
 ##### NodeJs - Dependencies used for dev
 
-* [Nodemon] : Nodemon est un outil qui aide à développer des applications basées sur .js nœud en redémarrant automatiquement l’application de nœud lorsque des modifications de fichier dans le répertoire sont détectées.
+- [Nodemon] : Nodemon est un outil qui aide à développer des applications basées sur .js nœud en redémarrant automatiquement l’application de nœud lorsque des modifications de fichier dans le répertoire sont détectées.
 
-* [prettier] : prettier
+- [prettier] : prettier
 
-    npm install --save-dev nodemon
-    npm install --save-dev --save-exact prettier
-    npm install --save-dev autocannon
+  npm install --save-dev nodemon
+  npm install --save-dev --save-exact prettier
+  npm install --save-dev autocannon
 
 #### 🔎 ESLINT
 
@@ -231,8 +229,8 @@ npm init @eslint/config
 
 #### cloud
 
-* [ ] Setup Local project
-* [ ] Setup gcloud poc environment
+- [ ] Setup Local project
+- [ ] Setup gcloud poc environment
 
 ## 📝 Memento
 

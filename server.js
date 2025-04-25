@@ -30,7 +30,8 @@ app.use('/memory2', memory);
 app.get('/', (req, res) => {
   res.send('<h1>Bonjour</h1>');
 });
-app.all('*', (req, res) => {
+
+app.use((req, res) => {
   res.status(404).send('<h1>Oups 404!</h1>');
 });
 

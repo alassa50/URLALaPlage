@@ -1,5 +1,6 @@
 const autocannon = require('autocannon');
 const fs = require('fs');
+const logger = require('../src/utils/logger');
 
 const RESULT_PATH = './result_autocannon.csv';
 fs.writeFileSync(RESULT_PATH, '');
@@ -31,14 +32,20 @@ function constructAutoCannonInstance(title, url) {
       body: JSON.stringify({
         data: constructPayload(),
       }),
-      connections: 10, // ITU-T suggests using 10 gateways (concurent connection)
+      connections: 10, // ITU-T suggests using 10 gateways (concurrent connection)
       pipelining: 1, // default
       bailout: 10000, // tolerable number of errors
       // overallRate: 6000, // rate of requests to make per second from all connections
       amount: 1500, // ITU-T suggests 15,000,000 IoT requests per day
       duration: 1,
     },
-    console.log,
+    (err, res) => {
+      if (err) {
+        logger.error(`Error in AutoCannon instance: ${err.message}`);
+      } else {
+        logger.info(`AutoCannon instance completed: ${JSON.stringify(res)}`);
+      }
+    },
   );
 }
 
@@ -49,64 +56,65 @@ function startBench(path) {
     renderProgressBar: true,
     renderResultsTable: true,
     renderLatencyTable: false,
-    progressBarString: 'Running :percent | Elapsed :elapsed (seconds) | Rate :rate | ETA :eta (seconds)',
+    progressBarString:
+      'Running :percent | Elapsed :elapsed (seconds) | Rate :rate | ETA :eta (seconds)',
   });
 
   instance.on('tick', (counter) => {
     if (counter.counter === 0) {
-      console.log(`${instance.opts.title} WARN! requests possibly is not being processed`);
+      logger.warn(`${instance.opts.title} WARN! requests possibly is not being processed`);
     }
   });
 
   instance.on('done', (results) => {
-    console.log(`${instance.opts.title} Results:`);
-    console.log(`Avg Tput (Req/sec): ${results.requests.average}`);
-    console.log(`Avg Lat (ms): ${results.latency.average}`);
+    logger.info(`${instance.opts.title} Results:`);
+    logger.info(`Avg Tput (Req/sec): ${results.requests.average}`);
+    logger.info(`Avg Lat (ms): ${results.latency.average}`);
 
     const row = `${instance.opts.title},${results.requests.average},${results.latency.average}\r\n`;
     fs.appendFileSync(RESULT_PATH, row);
-    console.log(`AutoCannon throughput result is saved at ${RESULT_PATH}`);
+    logger.info(`AutoCannon throughput result is saved at ${RESULT_PATH}`);
   });
 
   // this is used to kill the instance on CTRL-C
   process.on('SIGINT', () => {
-    console.log('\nGracefully shutting down from SIGINT (Ctrl-C)');
+    logger.info('\nGracefully shutting down from SIGINT (Ctrl-C)');
 
     instance.stop();
   });
 }
 
-function startBenchGet(path) {
-  const url = 'http://localhost:3001';
+// function startBenchGet(path) {
+//   const url = 'http://localhost:3001';
 
-  const numConnections = 1000;
-  const maxConnectionRequests = 1000;
+//   const numConnections = 1000;
+//   const maxConnectionRequests = 1000;
 
-  function finishedBench(err, res) {
-    // console.log('Finished Bench', err, res);
-  }
+//   function finishedBench(err, res) {
+//     // console.log('Finished Bench', err, res);
+//   }
 
-  const instance = autocannon(
-    {
-      url,
-      connections: numConnections,
-      duration: 10,
-      maxConnectionRequests,
-      headers: {
-        'content-type': 'application/json',
-      },
-      requests: [
-        {
-          method: 'GET',
-          path,
-        },
-      ],
-    },
-    finishedBench,
-  );
+//   const instance = autocannon(
+//     {
+//       url,
+//       connections: numConnections,
+//       duration: 10,
+//       maxConnectionRequests,
+//       headers: {
+//         'content-type': 'application/json',
+//       },
+//       requests: [
+//         {
+//           method: 'GET',
+//           path,
+//         },
+//       ],
+//     },
+//     finishedBench,
+//   );
 
-  autocannon.track(instance);
-}
+//   autocannon.track(instance);
+// }
 
 // startBenchGet('/youpi/short/alexandre');
 // startBenchGet('/youpi/passhort/alexandreyoupiohoh');

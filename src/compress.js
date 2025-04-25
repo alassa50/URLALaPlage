@@ -72,7 +72,7 @@ router.post('/passhort2', async (req, res) => {
 
   const { url } = req.body;
   logger.log('url :', url);
-  const decompressed = zlib.gunzipSync(new Buffer.from(url, 'hex')).toString();
+  const decompressed = zlib.gunzipSync(Buffer.from(url, 'hex')).toString();
 
   try {
     res.status(200).json({
